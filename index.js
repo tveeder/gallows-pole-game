@@ -6,6 +6,10 @@ var newWord;
 var count = 10;
 var correct = 0;
 
+
+// --------------------------------------------------------------
+
+
 var app = {
     players: ["Esposito", "Savard", "Secord", "Makita", "Coulter", "Wilson", "Kane", "Teows", "Hull", "Chelios", "Roenick", "Magnuson", "Larmer"],
 
