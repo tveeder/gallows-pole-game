@@ -14,6 +14,9 @@ function Letter(character) {
     }
 }
 
+// export this file as a module.  import with a require
+
+
 module.exports = Letter;
 
 
@@ -33,42 +36,3 @@ module.exports = Letter;
 
 
 
-
-
-
-
-
-
-
-
-
-// // blackhawks hangman game
-// // this is the constructor for the choosen letter
-
-// function Letter(character) {
-
-//     //initially sets the value to blank
-//     this.character = "_";
-
-
-//     // boolean to indicate whether the letter has been guessed already
-//     this.anAttempt = false;
-
-//     //empty until you start making guesses
-//     this.aGuess = "";
-
-
-//     this.guess = function () {
-
-//         if (this.anAttempt)
-//             return this.character = character;
-//         this.character = "_";   //if the boolean is false then you just get a blank
-//     }
-
-//     this.checkCharacter = function () {
-//         if (character === this.aGuess)
-//             return this.anAttempt = true;  //change the boolean
-//     }
-// }
-
-// module.exports = Letter;
