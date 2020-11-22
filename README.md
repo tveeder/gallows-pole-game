@@ -1,4 +1,11 @@
-# gallows-pole-game
-hangman word game
+# blackhawks-hangman-game
 
-Initial readme.   Used for intro to assignment work.  
+
+How to run it with Node.js
+
+Clone the repository.  
+
+$ cd repository
+$ npm install
+$ node index.js
+
