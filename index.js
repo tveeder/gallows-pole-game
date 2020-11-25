@@ -1,4 +1,3 @@
-
 //  modules which are used.  inquirer is a node module.  ./word.js is an exported file
 
 var Word = require("./word.js");
@@ -20,33 +19,31 @@ var app = {
 
     players: ["Esposito", "Savard", "Secord", "Makita", "Coulter", "Wilson", "Kane", "Teows", "Hull", "Chelios", "Roenick", "Magnuson", "Larmer"],
 
-    startgame: function () {
+    startgame: function() {
         console.log("\nBlackhawks Hangman");
         console.log("\nGuess the last name of the famous Blackhawks player");
     },
-    startOver: function () {   // this will reset the game
+    startOver: function() { // this will reset the game
         correct = 0;
         count = 10;
         app.randomWord();
     },
-    randomWord: function (err) {
-        var randomPick = app.players[Math.floor(Math.random() * app.players.length)];//randomly selecting a word
-        newWord = new Word(randomPick);//creating a new Word object
+    randomWord: function(err) {
+        var randomPick = app.players[Math.floor(Math.random() * app.players.length)]; //randomly selecting a word
+        newWord = new Word(randomPick); //creating a new Word object
 
-        newWord.createArray();  //make an array with the letters of the word
-        newWord.toString();     //make the array a string
+        newWord.createArray(); //make an array with the letters of the word
+        newWord.toString(); //make the array a string
     },
-    inquirer: function () {
+    inquirer: function() {
         if (count > 0) { //as long as there are more then 0 ramaining guesses..
-            inquirer.prompt([
-                {
-                    name: "guessedLetter",
-                    message: "Guess a letter!"
-                }
-            ]).then(function (answers) {
+            inquirer.prompt([{
+                name: "guessedLetter",
+                message: "Guess a letter!"
+            }]).then(function(answers) {
                 var currentCorrect = 0;
                 newWord.guessedLetter = answers.guessedLetter;
-                newWord.trueORfalse();  // this was imported from the word.js file
+                newWord.trueORfalse(); // this was imported from the word.js file
                 newWord.toString();
 
                 for (var n = 0; n < newWord.array.length; n++) {
@@ -79,6 +76,3 @@ var app = {
 app.startgame();
 app.randomWord();
 app.inquirer();
-
-
-
