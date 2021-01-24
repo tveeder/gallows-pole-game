@@ -10,3 +10,8 @@ $ cd hawks-hangman-game
 $ npm install
 
 $ node index.js
+
+
+![hippo](https://media.giphy.com/media/APMkhKPy29OXVG9wXr/giphy.gif)
+
+
